@@ -1,0 +1,6 @@
+---
+title: "p8105_hw_smm2350"
+author: "Shaina Mackin"
+output: github_document 
+---
+
