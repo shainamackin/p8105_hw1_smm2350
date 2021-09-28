@@ -4,3 +4,21 @@ author: "Shaina Mackin"
 output: github_document 
 ---
 
+# Problem 1
+## Create Data Frame
+
+```{r hw1_problem1}
+
+library(tidyverse)
+
+hw1_df = tibble(
+  norm_samp = rnorm(10, mean =1),
+  norm_samp_pos = norm_samp > 0,
+  vec_char = c("Portland", "Seattle", "New York City", "Los Angeles", "Denver", "Chicago", "Boston", "Baltimore", "Atlanta", "Philadelphia"),
+  vec_factor = factor(c("small", "medium", "large", "large", "medium", "medium", "small", "large", "medium", "small"))
+)
+
+mean_samp = mean(pull(hw1_df, norm_samp))
+
+```
+
