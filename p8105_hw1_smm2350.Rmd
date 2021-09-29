@@ -45,7 +45,16 @@ mean_samp = mean(pull(problem1_df, vec_factor))
 
 Taking the mean of the numeric vector, norm_samp, and logical vector, norm_samp_pos, worked. Taking the mean of vec_char and vec_factor did not work because, as the warning messages indicate, neither argument is either numeric or logical. 
 
+## Convert variables
 
+The following code chunk applies the as.numeric function to the logical, character, and factor variables
 
+```{r problem1_convert, results = FALSE, warning = FALSE}
 
+as.numeric(pull(problem1_df, norm_samp_pos))
+as.numeric(pull(problem1_df, vec_char))
+as.numeric(pull(problem1_df, vec_factor))
 
+```
+
+The logical vector is converted to a numeric vector of 0's and 1's. The factor vector is converted to a numeric vector of 1's, 2's, and 3's. The character vector is not able to be converted to a numeric vector; a warning message that says "NAs introduced by coercion" results from the attempt to do so. This is because R tried to coerce the character type values to the numeric type, but was unable to do so since there were no commonalities. Similarly, the means of the character and factor vectors would not have been meaningful, which explains what happened in the above attempt to take their means.
