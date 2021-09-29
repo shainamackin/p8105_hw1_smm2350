@@ -47,7 +47,7 @@ Taking the mean of the numeric vector, norm_samp, and logical vector, norm_samp_
 
 ## Convert variables
 
-The following code chunk applies the as.numeric function to the logical, character, and factor variables
+The following code chunk applies the as.numeric function to the logical, character, and factor variables.
 
 ```{r problem1_convert, results = FALSE, warning = FALSE}
 
@@ -58,3 +58,38 @@ as.numeric(pull(problem1_df, vec_factor))
 ```
 
 The logical vector is converted to a numeric vector of 0's and 1's. The factor vector is converted to a numeric vector of 1's, 2's, and 3's. The character vector is not able to be converted to a numeric vector; a warning message that says "NAs introduced by coercion" results from the attempt to do so. This is because R tried to coerce the character type values to the numeric type, but was unable to do so since there were no commonalities. Similarly, the means of the character and factor vectors would not have been meaningful, which explains what happened in the above attempt to take their means.
+
+# Problem 2
+
+## Load penguins
+
+The following code chunk loads the penguins dataset. 
+
+```{r penguins}
+
+data("penguins", package = "palmerpenguins")
+
+```
+
+## Describe dataset
+
+A short description of the penguins dataset using inline R code is below:
+
+
+## Make a scatterplot
+
+```{r scatterplot, warning = FALSE}
+
+ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
+
+```
+
+Export scatterplot to project directory. 
+
+```{r export, warning = FALSE}
+
+ggsave("penguin_plot.pdf", height = 4, width = 6)
+
+```
+
+
