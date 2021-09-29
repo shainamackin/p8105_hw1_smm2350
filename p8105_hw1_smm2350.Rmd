@@ -75,8 +75,7 @@ data("penguins", package = "palmerpenguins")
 
 A short description of the penguins dataset using inline R code is below:
 
-
-## Make a scatterplot
+## Make scatterplot
 
 ```{r scatterplot, warning = FALSE}
 
@@ -91,5 +90,3 @@ Export scatterplot to project directory.
 ggsave("penguin_plot.pdf", height = 4, width = 6)
 
 ```
-
-
