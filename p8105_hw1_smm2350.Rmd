@@ -31,7 +31,9 @@ problem1_df = tibble(
   vec_char = c("Portland", "Seattle", "NYC", "LA", "Denver", "Chicago", "Boston", "Baltimore", "Atlanta", "Philadelphia"),
   vec_factor = factor(c("small", "medium", "large", "large", "medium", "medium", "small", "large", "medium", "small"))
 )
- 
+
+problem1_df
+
 ```
 
 ### Take mean of each variable
